@@ -1,12 +1,12 @@
 #Step 5
 
 import random
-import hangman_art
-import hangman_words
+from hangman_art import stages, logo
+from hangman_words import word_list
 
 #TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
 
-chosen_word = random.choice(hangman_words.word_list)
+chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 
 end_of_game = False
@@ -14,10 +14,10 @@ lives = 6
 
 #TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.
 
-print(hangman_art.logo)
+print(logo)
 
 #Testing code
-print(f'Pssst, the solution is {chosen_word}.')
+# print(f'Pssst, the solution is {chosen_word}.')
 
 #Create blanks
 display = []
@@ -57,4 +57,5 @@ while not end_of_game:
         print("You lose.")
 
     #TODO-2: - Import the stages from hangman_art.py and make this error go away.
-    print(hangman_art.stages[lives])
+
+    print(stages[lives])
